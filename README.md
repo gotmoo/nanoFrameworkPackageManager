@@ -9,20 +9,26 @@ The script will:
 - Nuget will be called to restore packages from the ``packages.config`` file.
 - The nfProj file will be updated to import a reference to the DLL from the nuget package.
 
+<b>To start, run the powershell file to load the function into memory. </b>
+
 ### Example:
 
 ```PowerShell
-# add the package nanoFramework.Hardware.Esp32 to the project in the current folder. Only one nfProj file is supported
+# add the package nanoFramework.Hardware.Esp32 to the project in the 
+# current folder. Only one nfProj file is supported.
 Add-NanoNugetPackage -nugetPackage "nanoFramework.Hardware.Esp32"
 ```
 
 ```PowerShell
-# add the package nanoFramework.Hardware.Esp32 to a project in another folder. Path can be relative
+# add the package nanoFramework.Hardware.Esp32 to a project in 
+# another folder. Path can be relative
 Add-NanoNugetPackage -nugetPackage "nanoFramework.Hardware.Esp32" -projectFile "path/to/project.nfProj"
 ```
 
 ```PowerShell
-# add the package nanoFramework.Hardware.Esp32 to a project in another folder. Specify the location of nuget.exe if it is not in the path.
+# add the package nanoFramework.Hardware.Esp32 to a project in 
+# another folder. Specify the location of nuget.exe if it is 
+# not in the path.
 Add-NanoNugetPackage -nugetPackage "nanoFramework.Hardware.Esp32" -nugetLocation "c:\nuget\nuget.exe"
 ```
 
